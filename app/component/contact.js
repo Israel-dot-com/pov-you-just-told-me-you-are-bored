@@ -35,7 +35,7 @@ export default function Contact() {
     <div className=''>
         
         <div id='contact' className="flex justify-center py-10 ">
-            <form className="bg-white py-5 h-fit w-fit px-3 md:p-10 pt-7 md:w-[40%] text-black flex flex-col gap-y-7">
+            <form  id="my-form" action="https://formspree.io/f/xyyqokeq" method="POST" onSubmit={handleSubmit} className="bg-white py-5 h-fit w-fit px-3 md:p-10 pt-7 md:w-[40%] text-black flex flex-col gap-y-7">
                 <h1 className="text-center text-lg tracking-widest font-semibold">Contact Me</h1>
                 <div className='flex flex-col gap-y-1.5'>
                     <label>Full name</label>
