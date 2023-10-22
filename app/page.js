@@ -11,7 +11,7 @@ import Contact from "./component/contact"
 import Skeleton from "./component/skeleton";
 
 async function getData() {
-  const res = await fetch("http://www.boredapi.com/api/activity/");
+  const res = await fetch("https://www.boredapi.com/api/activity/");
   
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -27,7 +27,7 @@ export default function Page() {
     // Simulate fetching gallery data
     setTimeout(() => {
       setLoading(false); // Set loading state to false when data is fetched
-    }, 20); // Adjust the delay as needed
+    }, 50); // Adjust the delay as needed
   }, []);
 
   const [todos, setTodos] = useState([]);
@@ -72,8 +72,8 @@ export default function Page() {
                 </div>
                 
                 <div>
-                    {todos.price === 0 ? <p>This activity is free to do</p>: <p>It costs about ${todos.price} which is give or take, about ₦{todos.price*15}K to do that</p>}
                     
+                  {todos.price === 0 ? <p>This activity is free to do</p>: <p>It costs about ${todos.price} which is give or take, about ₦{todos.price*15}K to do that</p>}
                     
                 </div>
                 
