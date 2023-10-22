@@ -25,3 +25,45 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bgimage{
+  background-image: url("./bgimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.skeleton-loader {
+  width: 25px; /* Adjust width as needed */
+  height: 25px; /* Adjust height as needed */
+  background: #ccc; /* Adjust background color as needed */
+  border-radius: 50%; /* For a circular loader, adjust as needed */
+  animation: loading 1s infinite; /* Add animation for a loading effect */
+  margin-right: 10px; /* Adjust margin as needed for spacing */
+}
+
+.skeleton-lines {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust gap as needed */
+}
+
+.line {
+  width: 50px; /* Adjust width of lines as needed */
+  height: 5px; /* Adjust height of lines as needed */
+  background: #ccc; /* Adjust line color as needed */
+  animation: loading 1s infinite; /* Add animation for a loading effect */
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
